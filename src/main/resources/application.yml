@@ -1,0 +1,21 @@
+server:
+  port: 8080
+  address: 127.0.0.1
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/file_db?useSSL=false&amp;serverTimezone=UTC
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+mybatis:
+  mapper-locations: classpath:mapper/.*xml
+  type-aliases-package: aliyun.xiaoming.filemanage.entity
+
+file:
+  upload-dir: ./uploads
